@@ -300,13 +300,14 @@
     "connector": "AC 110-240V Multi-Bay",
     "connectorEs": "Alimentación Centralizada AC 110-240V",
     "compatibility": [
-      "G-510 POCKET POC",
-      "G-280 POC-UHF",
-      "G0 PLUS",
-      "G-6 PLUS",
-      "G-8 PLUS",
-      "G-5288 PLUS",
-      "ALERVITES AT1"
+      "G0 Plus",
+      "G9 Plus",
+      "G6 Plus"
+    ],
+    "compatibilityEs": [
+      "G0 Plus",
+      "G9 Plus",
+      "G6 Plus"
     ],
     "specs": [
       {
@@ -350,18 +351,10 @@
     "connector": "Funda Protectora / Rugged Case",
     "connectorEs": "Funda Protectora / Uso Rudo",
     "compatibility": [
-      "G-510 POCKET POC",
-      "G-280 POC-UHF",
-      "G-889 POC-UHF",
-      "G-H28 TACTICAL POC",
-      "Terminales PoC Compactos Serie G"
+      "G0 Plus"
     ],
     "compatibilityEs": [
-      "G-510 POCKET POC",
-      "G-280 POC-UHF",
-      "G-889 POC-UHF",
-      "G-H28 TACTICAL POC",
-      "Terminales PoC Compactos Serie G"
+      "G0 Plus"
     ],
     "specs": [
       {
@@ -390,7 +383,7 @@
       }
     ],
     "inStock": true,
-    "priceEstimate": "$12"
+    "priceEstimate": "$15"
   },
   {
     "id": "acc-silicone-case-type-b",
@@ -405,16 +398,10 @@
     "connector": "Funda Protectora / Rugged Case",
     "connectorEs": "Funda Protectora / Uso Rudo",
     "compatibility": [
-      "ALERVITES AT1 BY BAOFENG",
-      "G-5288 PLUS LONG-RANGE",
-      "G8 PLUS TRI-MODE",
-      "Radios Portátiles Serie Dual-Band / VHF-UHF"
+      "G9 Plus"
     ],
     "compatibilityEs": [
-      "ALERVITES AT1 BY BAOFENG",
-      "G-5288 PLUS LONG-RANGE",
-      "G8 PLUS TRI-MODE",
-      "Radios Portátiles Serie Dual-Band / VHF-UHF"
+      "G9 Plus"
     ],
     "specs": [
       {
@@ -443,6 +430,6 @@
       }
     ],
     "inStock": true,
-    "priceEstimate": "$12"
+    "priceEstimate": "$15"
   }
 ]
