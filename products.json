@@ -1262,5 +1262,165 @@
       "business-use"
     ],
     "priceEstimate": "$125"
+  },
+  {
+    "id": "G-U6",
+    "name": "G-U6 4G NETWORK POC RADIO",
+    "shortName": "G-U6 POC",
+    "badge": "COMPACT 4G POC & FLASHLIGHT",
+    "image": "/images/g-u6.webp",
+    "description": "G-U6 4G Network PoC Walkie Talkie: ultra-compact commercial handheld radio with Linux OS, dual SIM card slots, Type-C charging, integrated LED emergency flashlight, and 5000km nationwide coverage for security teams and business fleets.",
+    "inStock": true,
+    "stockStatus": "in_stock",
+    "stockCount": 45,
+    "fallbackSimilarId": "G-510",
+    "fallbackReason": "G-510 POCKET POC provides similar ultra-compact pocket portability.",
+    "specs": [
+      {
+        "label": "Network & Coverage",
+        "value": "4G LTE Cellular PoC / Up to 5000km Nationwide"
+      },
+      {
+        "label": "Frequency Bands",
+        "value": "LA: B2/3/4/5/7/8/28/66 | EU: B1/3/5/7/8/20/28/38/40/41"
+      },
+      {
+        "label": "Operating System",
+        "value": "Linux OS Embedded Platform"
+      },
+      {
+        "label": "PoC Platforms",
+        "value": "Gxin PoC Global / Real-PTT / POCSTARS"
+      },
+      {
+        "label": "Display",
+        "value": "1.77-inch High-Brightness Color LCD"
+      },
+      {
+        "label": "SIM Slots & Charging",
+        "value": "Dual SIM Card Slots / Direct USB Type-C (5V/1A)"
+      },
+      {
+        "label": "Battery Capacity",
+        "value": "3000 mAh Li-ion Rechargeable"
+      },
+      {
+        "label": "Audio & Headset",
+        "value": "Front Acoustic Grille / K-Head (Kenwood 2-Pin) Jack"
+      },
+      {
+        "label": "Utility Features",
+        "value": "Integrated Top LED Flashlight / PTT & Side Alarms"
+      },
+      {
+        "label": "Dimensions & Weight",
+        "value": "60 x 35 x 125 mm / 150g Ultra-Lightweight"
+      }
+    ],
+    "comparison": {
+      "connectivity": "Global 4G LTE Multi-Band PoC Cellular Network",
+      "protection": "High-Impact Compact Polycarbonate Casing",
+      "batteryRuntime": "28 Hours Standby (3000mAh Battery)",
+      "audioOutput": "2.0W Front Acoustic Speaker Grille",
+      "controls": "3 Front Navigation Keys + Side Textured PTT",
+      "formFactor": "Pocket Lightweight Handheld (150g)",
+      "antenna": "Stubby Compact High-Efficiency Cellular Antenna",
+      "emergency": "Top LED Emergency Flashlight & Instant SOS Alert",
+      "videoVision": "Not available",
+      "certifications": "FCC / CE Commercial Compliance"
+    },
+    "tags": [
+      "poc",
+      "4g-lte",
+      "g-u6",
+      "linux-os",
+      "dual-sim",
+      "flashlight",
+      "compact",
+      "type-c",
+      "unlimited-range",
+      "business-use"
+    ],
+    "priceEstimate": "$125"
+  },
+  {
+    "id": "G-H18",
+    "name": "G-H18 TACTICAL METAL FRAME POC",
+    "shortName": "G-H18 POC",
+    "badge": "RUGGED METAL EXOSKELETON POC",
+    "image": "/images/g-h18.webp",
+    "description": "G-H18 Tactical 4G Network PoC Walkie Talkie: reinforced gunmetal aluminum exoskeleton chassis with flashing safety warning light, Android/Linux OS, GPS tracking support, Type-C audio & charging, dual SIM slots, and 3000mAh battery for demanding industrial operations.",
+    "inStock": true,
+    "stockStatus": "in_stock",
+    "stockCount": 40,
+    "fallbackSimilarId": "WA0057-TacticalField",
+    "fallbackReason": "G-9 PLUS TACTICAL FIELD provides high-durability reinforced field communication.",
+    "specs": [
+      {
+        "label": "Network & Coverage",
+        "value": "4G LTE Multi-Band + Wi-Fi / Nationwide 5000km Range"
+      },
+      {
+        "label": "Frequency Bands",
+        "value": "LA: B2/4/5/7/12/13/17/26/28/40/41 | EU: B1/3/5/7/8/20/28/38/40/41"
+      },
+      {
+        "label": "Chassis Build",
+        "value": "Reinforced Metal Exoskeleton Frame with Corner Armor"
+      },
+      {
+        "label": "Operating System",
+        "value": "Android / Linux OS with Multi-Platform Dispatch"
+      },
+      {
+        "label": "PoC Compatibility",
+        "value": "Zello, Gxin PoC Global, Real-PTT, Pocstars, WalkieFleet"
+      },
+      {
+        "label": "Display & Telemetry",
+        "value": "1.77-inch Color Screen with Real-Time Fleet Indicators"
+      },
+      {
+        "label": "GPS & Safety",
+        "value": "GPS Location Tracking Support & Flashing Warning Light"
+      },
+      {
+        "label": "Battery & Power",
+        "value": "3000 mAh Li-ion / Type-C Direct Fast Charging"
+      },
+      {
+        "label": "Audio & Ports",
+        "value": "Heavy-Duty Triple-Slot Speaker / Type-C Audio Port"
+      },
+      {
+        "label": "Dimensions & Weight",
+        "value": "57 x 25 x 150 mm / 225g Tactical Metal Build"
+      }
+    ],
+    "comparison": {
+      "connectivity": "4G LTE Multi-Band + Wi-Fi Global PoC",
+      "protection": "Reinforced Metal Frame Armor Exoskeleton",
+      "batteryRuntime": "30 Hours Standby (3000mAh Battery)",
+      "audioOutput": "2.2W Heavy-Duty Triple-Vent Front Speaker",
+      "controls": "Dedicated Directional Keypad + Rotary Dial Knob",
+      "formFactor": "Tactical Heavy-Duty Metal Handheld (225g)",
+      "antenna": "Reinforced Stubby Cellular Antenna",
+      "emergency": "Flashing Safety Warning Light & Emergency SOS",
+      "videoVision": "Not available",
+      "certifications": "FCC / CE Commercial Compliance"
+    },
+    "tags": [
+      "poc",
+      "4g-lte",
+      "g-h18",
+      "metal-frame",
+      "zello",
+      "gps-supported",
+      "warning-light",
+      "type-c",
+      "dual-sim",
+      "tactical-armor"
+    ],
+    "priceEstimate": "$185"
   }
 ]

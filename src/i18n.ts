@@ -996,6 +996,16 @@ export const PRODUCT_TRANSLATIONS_ES: Record<string, ProductLocalizedContent> = 
     name: 'M88 DUAL-MODE MINI POC',
     badge: 'POC 4G & FRS DUAL-MODE',
     description: 'Mini radio bidireccional de modo dual M88: comunicación Push-To-Talk nacional e ilimitada sobre red celular 4G LTE y canales directos locales FRS UHF. Cancelación activa de ruido DSP, soporte para tarjeta SIM, puerto de carga USB directo, pantalla a color LCD y teclado numérico completo de 12 botones en acabados naranja táctico y verde lima.'
+  },
+  'G-U6': {
+    name: 'G-U6 RADIO POC RED 4G',
+    badge: 'POC 4G COMPACTO CON LINTERNA',
+    description: 'Radio bidireccional PoC 4G LTE ultracompacta con sistema operativo Linux, ranura para doble tarjeta SIM, puerto de carga rápida USB Tipo-C, linterna LED de emergencia integrada y pantalla a color de 1.77 pulgadas. Diseñada para comunicación Push-To-Talk nacional e ilimitada en hotelería, logística y seguridad.'
+  },
+  'G-H18': {
+    name: 'G-H18 POC TÁCTICO MARCO METÁLICO',
+    badge: 'POC REFORZADO MARCO METÁLICO',
+    description: 'Terminal PoC 4G de grado táctico con chasis reforzado de marco metálico y amortiguadores angulares contra caídas. Compatible con Zello y plataformas PoC globales, luz estroboscópica de advertencia, soporte de rastreo GPS, audio y carga directa Tipo-C, doble SIM y batería de 3000 mAh para operaciones de alta exigencia.'
   }
 };
 
