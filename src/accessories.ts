@@ -3,6 +3,7 @@ import { escapeHtml } from './utils/escape.ts';
 import type { CartItem } from './types';
 import accessoriesData from './accessories.json';
 import { initCart, addCartItem, openCartDrawer } from './cart';
+import { initTacticalConcierge } from './concierge';
 import { initI18n, getLanguage, t, onLanguageChange, toggleLanguage } from './i18n';
 
 type AccessoryCategory = 'microphones' | 'earphones' | 'chargers' | 'cases';
@@ -237,7 +238,7 @@ function renderCard(a: Accessory): string {
     .join('');
 
   return `
-    <div class="bg-white rounded-2xl border border-gray-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
+    <div id="accessory-card-${escapeHtml(a.id)}" class="bg-white rounded-2xl border border-gray-200/80 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden flex flex-col">
       <div class="relative aspect-square bg-gray-50 overflow-hidden group cursor-pointer" data-accessory-specs="${escapeHtml(a.id)}">
         <img src="${escapeHtml(a.image)}" alt="${escapeHtml(localizedName(a))}" loading="lazy"
              class="w-full h-full object-contain p-4 group-hover:scale-110 transition-transform duration-500"
@@ -407,6 +408,7 @@ initCart();
 initAccessoryEvents();
 initLanguageToggle();
 initCartButton();
+initTacticalConcierge();
 renderGrid();
 fetchLiveAccessories();
 

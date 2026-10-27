@@ -5,6 +5,7 @@ import type { Product } from './types';
 import { initCart, openCartDrawer, closeCartDrawer, addToCart, addCartItem, subscribe as subscribeCart, renderCartDrawer } from './cart';
 import accessoriesData from './accessories.json';
 import { initComparison } from './comparison';
+import { initTacticalConcierge } from './concierge';
 import { initFinder, resetFinder } from './finder';
 import { initI18n, getLanguage, toggleLanguage, t, tSpecLabel, onLanguageChange, getLocalizedProduct } from './i18n';
 import { initLegalModule, openLegalModal } from './legal';
@@ -1593,6 +1594,7 @@ initFinder();
 initLegalModule();
 initBriefings();
 initHomeAccessories();
+initTacticalConcierge();
 
 // Default siteShowPrices to true so catalog displays configured prices immediately
 (window as any).siteShowPrices = true;
