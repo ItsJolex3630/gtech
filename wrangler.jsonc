@@ -1,0 +1,6 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "g-tech",
+  "compatibility_date": "2024-11-01",
+  "pages_build_output_dir": "dist"
+}
