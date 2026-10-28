@@ -539,54 +539,9 @@
 }
 
 /* G-Operator conversational assistant */
-.as-svg {
-  display: block;
-  overflow: visible;
-}
-
-.as-launcher .as-body,
-.as-header .as-body {
-  animation: asBob 3.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-  transform-origin: 50% 90%;
-  will-change: transform;
-}
-
-.as-launcher .as-shadow {
-  animation: asShadow 3.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
-  transform-origin: 50% 50%;
-  will-change: transform, opacity;
-}
-
-.as-eye {
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: asBlink 4.8s infinite;
-}
-
-.as-pupil {
-  transform-box: fill-box;
-  transform-origin: center;
-  transition: transform 0.14s ease-out;
-}
-
-.as-launcher.hop .as-body,
-.as-header.hop .as-body {
+.as-launcher.hop .as-avatar-frame,
+.as-header.hop .as-avatar-frame {
   animation: asHop 0.65s cubic-bezier(0.2, 0.8, 0.3, 1) forwards;
-}
-
-@keyframes asBob {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-5px) rotate(1.2deg); }
-}
-
-@keyframes asShadow {
-  0%, 100% { transform: scaleX(1); opacity: 0.45; }
-  50% { transform: scaleX(0.88); opacity: 0.28; }
-}
-
-@keyframes asBlink {
-  0%, 88%, 93%, 98%, 100% { transform: scaleY(1); }
-  90%, 95% { transform: scaleY(0.08); }
 }
 
 @keyframes asHop {
@@ -786,18 +741,13 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .as-launcher .as-body,
-  .as-header .as-body,
-  .as-launcher .as-shadow,
-  .as-eye,
-  .as-launcher.hop .as-body,
-  .as-header.hop .as-body,
+  .as-launcher.hop .as-avatar-frame,
+  .as-header.hop .as-avatar-frame,
   .as-msg-in,
   .as-typing span {
     animation: none !important;
   }
 
-  .as-pupil,
   .as-flying-ghost {
     transition: none;
   }

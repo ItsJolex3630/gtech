@@ -276,10 +276,10 @@
           </div>
         </div>
 
-        <!-- Right Column: Avatar Stage with Tactical Aura & Non-Overlapping Telemetry -->
+        <!-- Right Column: Avatar Stage with Tactical Aura & Interactive Speech Bubble -->
         <div class="lg:w-1/2 relative w-full flex items-center justify-center pt-8 sm:pt-0">
-          <div class="relative w-full max-w-[340px] sm:max-w-md lg:max-w-lg mx-auto flex items-end justify-center">
-            
+          <div id="hero-avatar-stage" class="relative w-full max-w-[340px] sm:max-w-md lg:max-w-lg mx-auto flex items-end justify-center cursor-pointer group/avatar select-none" role="button" tabindex="0" aria-label="Abrir Asesor Táctico G-TECH">
+
             <!-- Animated Background Tactical Aura -->
             <div class="absolute inset-0 bg-gradient-to-tr from-navy-800/15 via-crimson-800/10 to-transparent rounded-full filter blur-3xl -z-10 avatar-glow"></div>
             <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full border border-navy-800/10 -z-10 animate-radar-spin"></div>
@@ -287,7 +287,7 @@
             <div class="absolute w-56 h-56 sm:w-72 sm:h-72 rounded-full border border-dashed border-crimson-800/20 -z-10 animate-radar-spin-reverse"></div>
 
             <!-- Floating Badge 1: Top Left (Moved safely OUTSIDE the character silhouette) -->
-            <div class="absolute -top-3 left-0 sm:-left-8 lg:-left-12 bg-white/95 backdrop-blur-md border border-gray-200/90 px-3.5 py-2 rounded-2xl shadow-xl z-20 flex items-center gap-2.5 transition-transform hover:scale-105 pointer-events-auto">
+            <div class="absolute -top-3 left-0 sm:-left-8 lg:-left-12 bg-white/95 backdrop-blur-md border border-gray-200/90 px-3.5 py-2 rounded-2xl shadow-xl z-20 hidden items-center gap-2.5 transition-transform hover:scale-105 pointer-events-auto sm:flex">
               <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
               <div class="text-left">
                 <span class="block text-[9px] font-bold text-gray-400 uppercase tracking-wider leading-none" data-i18n="hero.badge_network_sub">Multiband Network</span>
@@ -306,10 +306,27 @@
               </div>
             </div>
 
-            <!-- Brand Cutout Avatar: Full Unobstructed View -->
-            <img src="/images/hero-avatar.webp" 
-                 alt="G-TECH.US Tactical Communications Expert" 
-                 class="relative z-10 w-full max-h-[420px] sm:max-h-[480px] object-contain drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] select-none pointer-events-none" />
+            <!-- Interactive Tactical Speech Bubble (Asesor en vivo) -->
+            <div id="hero-avatar-bubble" class="absolute -top-16 sm:-top-16 z-30 max-w-[270px] sm:max-w-xs bg-slate-950/95 backdrop-blur-md border border-cyan-500/60 p-3 rounded-2xl shadow-2xl transition-all duration-300 group-hover/avatar:scale-105 group-hover/avatar:border-cyan-400 pointer-events-auto">
+              <div class="flex items-start gap-2.5">
+                <span class="flex h-2.5 w-2.5 relative flex-shrink-0 mt-1">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
+                </span>
+                <div class="text-left">
+                  <p class="text-[10px] font-mono uppercase tracking-widest text-cyan-400 font-extrabold" data-i18n="hero.avatar_bubble_title">ASESOR TÁCTICO // EN LÍNEA</p>
+                  <p class="text-[11px] sm:text-xs text-slate-200 mt-0.5 leading-snug font-medium" data-i18n="hero.avatar_bubble_msg">¡Hola! Estoy aquí para ayudarte a elegir tu equipo ideal y responder cada duda. Haz clic para consultar.</p>
+                </div>
+              </div>
+              <!-- Indicador tipo punta táctica hacia el avatar -->
+              <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[8px] border-t-cyan-500/80"></div>
+            </div>
+
+            <!-- Brand Cutout Avatar: Full Unobstructed View & Interactive Glow -->
+            <img id="hero-avatar-img"
+                 src="/images/hero-avatar.webp"
+                 alt="G-TECH.US Tactical Communications Expert"
+                 class="relative z-10 w-full max-h-[420px] sm:max-h-[480px] object-contain drop-shadow-2xl [mask-image:linear-gradient(to_bottom,black_90%,transparent_100%)] transition-transform duration-300 group-hover/avatar:scale-[1.02]" />
           </div>
         </div>
 

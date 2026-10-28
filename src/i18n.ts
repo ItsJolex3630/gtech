@@ -62,6 +62,11 @@ export const translations: Translations = {
   'hero.badge_network_sub': { en: 'Multiband Network', es: 'Red Multibanda' },
   'hero.badge_security': { en: 'AES-256 Encrypted', es: 'Cifrado AES-256' },
   'hero.badge_security_sub': { en: 'Security', es: 'Seguridad' },
+  'hero.avatar_bubble_title': { en: 'TACTICAL ADVISOR // ONLINE', es: 'ASESOR TÁCTICO // EN LÍNEA' },
+  'hero.avatar_bubble_msg': {
+    en: "Hi! I'm here to help you choose the right gear and answer any questions. Click to chat.",
+    es: '¡Hola! Estoy aquí para ayudarte a elegir tu equipo ideal y responder cada duda. Haz clic para consultar.'
+  },
 
   // Catalog Section
   'catalog.subtitle': { en: 'Professional Hardware', es: 'Hardware Profesional' },

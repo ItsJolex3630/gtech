@@ -8,7 +8,7 @@ import { escapeHtml } from './utils/escape.ts';
 const WHATSAPP_NUMBER = '14074273356';
 const CONTACT_EMAIL = 'gtech.usfl@gmail.com';
 const PANEL_CLASS = 'concierge-gpu-accel fixed bottom-24 right-4 z-50 hidden h-[min(600px,calc(100dvh-9rem))] w-[calc(100vw-2rem)] flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 shadow-2xl backdrop-blur-md focus:outline-none sm:bottom-28 sm:right-6 sm:w-[400px]';
-const ONLINE_STATUS = { en: 'Online · Tactical advisor', es: 'En línea · Asesor táctico' };
+const ONLINE_STATUS = { en: 'Online', es: 'En línea' };
 const TYPING_STATUS = { en: 'Typing…', es: 'Escribiendo…' };
 
 interface Accessory {
@@ -438,8 +438,8 @@ function greeting(): ChatMessage {
   return {
     role: 'bot',
     text: t(
-      'I am **G-Operator**, your G-TECH tactical advisor. I know every PoC radio, bodycam, accessory and the full compatibility matrix. Tell me about your operation or ask about any model.',
-      'Soy **G-Operator**, tu asesor táctico de G-TECH. Conozco cada radio PoC, bodycam, accesorio y la matriz de compatibilidad completa. Cuéntame tu operación o pregúntame por cualquier modelo.'
+      'I am **Geramel**, your G-TECH tactical advisor. I know every PoC radio, bodycam, accessory and the full compatibility matrix. Tell me about your operation or ask about any model.',
+      'Soy **Geramel**, tu asesor táctico de G-TECH. Conozco cada radio PoC, bodycam, accesorio y la matriz de compatibilidad completa. Cuéntame tu operación o pregúntame por cualquier modelo.'
     ),
     chips: DEFAULT_CHIPS()
   };
@@ -977,42 +977,22 @@ function answer(raw: string): Reply {
   return fallbackReply();
 }
 
-function renderAvatar(): string {
+function renderAvatarPhoto(): string {
   return `
-    <svg class="as-svg h-full w-full" viewBox="12 12 40 40" aria-hidden="true">
-      <g class="as-body">
-        <path d="M9 60c0-8.5 9.5-13 23-13s23 4.5 23 13z" fill="#1e293b" stroke="#475569" stroke-width="1.4"/>
-        <path d="M24 49l4 11M40 49l-4 11" stroke="#22d3ee" stroke-opacity="0.35" stroke-width="1.8"/>
-        <path d="M27 42h10v7H27z" fill="#94a3b8"/>
-        <ellipse cx="32" cy="33" rx="14" ry="14.5" fill="#cbd5e1"/>
-        <path d="M13.5 32.5c0-11.5 8.2-19.5 18.5-19.5s18.5 8 18.5 19.5V33h-37z" fill="#334155" stroke="#64748b" stroke-width="1.4"/>
-        <path d="M13.5 32.5h37" stroke="#22d3ee" stroke-opacity="0.6" stroke-width="2"/>
-        <rect x="29" y="10.5" width="6" height="5" rx="1.5" fill="#0f172a" stroke="#22d3ee" stroke-opacity="0.75"/>
-        <rect x="16.5" y="30.5" width="31" height="10" rx="5" fill="#020617" stroke="#22d3ee" stroke-opacity="0.85" stroke-width="1.6"/>
-        <g class="as-eye">
-          <ellipse cx="25.8" cy="35.5" rx="4" ry="3.4" fill="#e0f2fe"/>
-          <circle class="as-pupil" cx="25.8" cy="35.5" r="1.8" fill="#0f172a"/>
-        </g>
-        <g class="as-eye">
-          <ellipse cx="38.2" cy="35.5" rx="4" ry="3.4" fill="#e0f2fe"/>
-          <circle class="as-pupil" cx="38.2" cy="35.5" r="1.8" fill="#0f172a"/>
-        </g>
-        <path d="M28.5 46.5q3.5 2.4 7 0" stroke="#475569" stroke-width="1.6" fill="none" stroke-linecap="round"/>
-        <path d="M50.5 35.5c4 1 5.5 4 4.5 7.5" stroke="#475569" stroke-width="1.8" fill="none" stroke-linecap="round"/>
-        <circle cx="54.5" cy="43.5" r="2.1" fill="#22d3ee" fill-opacity="0.9"/>
-      </g>
-    </svg>`;
+    <div class="as-avatar-frame relative h-full w-full overflow-hidden rounded-full border border-cyan-400/50 bg-slate-900 shadow-inner">
+      <img src="/images/hero-avatar.webp" alt="Geramel · Asesor G-TECH" class="h-full w-full object-cover object-top scale-125 translate-y-1 select-none pointer-events-none" loading="lazy" />
+    </div>`;
 }
 
 function renderLauncher(): string {
   return `
-    <button id="tactical-concierge-launcher" type="button" aria-label="G-Operator tactical chat" aria-expanded="false" aria-controls="tactical-concierge-panel" class="as-launcher group concierge-gpu-accel tactical-beacon-active fixed bottom-20 right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full border-2 border-cyan-500/40 bg-slate-900 text-cyan-400 shadow-2xl shadow-cyan-500/20 transition-all duration-200 hover:scale-105 hover:border-cyan-400 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:bottom-24 sm:right-6">
-      <span data-as-tooltip class="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-md border border-slate-700 bg-slate-950/95 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-cyan-300 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">G-OPERATOR</span>
+    <button id="tactical-concierge-launcher" type="button" aria-label="Geramel G-TECH chat" aria-expanded="false" aria-controls="tactical-concierge-panel" class="as-launcher group fixed bottom-20 right-4 z-40 flex h-14 w-14 items-center justify-center rounded-full border-2 border-cyan-500/40 bg-slate-900 text-cyan-400 shadow-2xl shadow-cyan-500/20 transition-all duration-300 ease-out hover:scale-105 hover:border-cyan-400 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:bottom-24 sm:right-6">
+      <span data-as-tooltip class="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-md border border-slate-700 bg-slate-950/95 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-cyan-300 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">GERAMEL</span>
       <span class="absolute -right-1 -top-1 flex h-3 w-3">
         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
         <span class="relative inline-flex h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-slate-950"></span>
       </span>
-      <span class="h-10 w-10">${renderAvatar()}</span>
+      <span class="tactical-beacon-active h-11 w-11 rounded-full">${renderAvatarPhoto()}</span>
     </button>`;
 }
 
@@ -1118,11 +1098,11 @@ function renderMessage(message: ChatMessage): string {
 function renderPanelChrome(): string {
   return `
     <header class="as-header flex flex-shrink-0 items-center gap-3 border-b border-slate-800 bg-slate-900/60 px-3 py-2.5">
-      <span class="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl border border-slate-700 bg-slate-950">
-        ${renderAvatar()}
+      <span class="h-10 w-10 flex-shrink-0">
+        ${renderAvatarPhoto()}
       </span>
       <div class="min-w-0 flex-1">
-        <p class="font-mono text-[11px] font-bold uppercase tracking-widest text-cyan-400">G-OPERATOR</p>
+        <p class="font-mono text-[11px] font-bold uppercase tracking-widest text-cyan-400">GERAMEL <span class="text-slate-600">//</span> ${t('G-TECH ADVISOR', 'ASESOR G-TECH')}</p>
         <p class="mt-0.5 flex items-center gap-1.5 text-[10px] text-emerald-400">
           <span class="relative flex h-1.5 w-1.5">
             <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
@@ -1151,7 +1131,7 @@ export function initTacticalConcierge(): void {
 
   const root = document.createElement('div');
   root.id = 'tactical-concierge-root';
-  root.innerHTML = `${renderLauncher()}<div id="tactical-concierge-panel" role="dialog" aria-label="${t('G-Operator chat', 'Chat de G-Operator')}" aria-hidden="true" tabindex="-1" class="${PANEL_CLASS}"></div>`;
+  root.innerHTML = `${renderLauncher()}<div id="tactical-concierge-panel" role="dialog" aria-label="${t('Geramel chat', 'Chat de Geramel')}" aria-hidden="true" tabindex="-1" class="${PANEL_CLASS}"></div>`;
   document.body.appendChild(root);
 
   const launcher = root.querySelector<HTMLButtonElement>('#tactical-concierge-launcher');
@@ -1178,9 +1158,9 @@ export function initTacticalConcierge(): void {
   };
 
   const syncLauncher = (): void => {
-    launcher.setAttribute('aria-label', t('Open G-Operator chat', 'Abrir chat de G-Operator'));
+    launcher.setAttribute('aria-label', t('Open Geramel chat', 'Abrir chat de Geramel'));
     const tooltip = launcher.querySelector<HTMLElement>('[data-as-tooltip]');
-    if (tooltip) tooltip.textContent = t('G-OPERATOR | Tactical Advisor', 'G-OPERATOR | Asesor Táctico');
+    if (tooltip) tooltip.textContent = t('GERAMEL | G-TECH Advisor', 'GERAMEL | Asesor G-TECH');
   };
 
   const renderMessages = (): void => {
@@ -1220,7 +1200,7 @@ export function initTacticalConcierge(): void {
   };
 
   const flyToAssistant = (source: HTMLElement): void => {
-    const target = isOpen ? panel.querySelector<SVGSVGElement>('.as-svg') : launcher;
+    const target = isOpen ? panel.querySelector<HTMLElement>('.as-avatar-frame') : launcher;
     if (!target) return;
 
     const from = source.getBoundingClientRect();
@@ -1312,6 +1292,50 @@ export function initTacticalConcierge(): void {
 
   renderChrome();
 
+  const heroStage = document.getElementById('hero-avatar-stage');
+  let heroVisible = false;
+
+  const syncLauncherVisibility = (): void => {
+    const hidden = heroStage !== null && heroVisible;
+    launcher.classList.toggle('opacity-0', hidden);
+    launcher.classList.toggle('pointer-events-none', hidden);
+    launcher.classList.toggle('translate-y-4', hidden);
+    launcher.classList.toggle('opacity-100', !hidden);
+    launcher.classList.toggle('pointer-events-auto', !hidden);
+    launcher.classList.toggle('translate-y-0', !hidden);
+
+    if (hidden) {
+      launcher.tabIndex = -1;
+      launcher.setAttribute('aria-hidden', 'true');
+    } else {
+      launcher.removeAttribute('tabindex');
+      launcher.removeAttribute('aria-hidden');
+    }
+  };
+
+  if (heroStage) {
+    const rect = heroStage.getBoundingClientRect();
+    heroVisible = rect.top < window.innerHeight && rect.bottom > 0;
+    syncLauncherVisibility();
+
+    new IntersectionObserver(entries => {
+      for (const entry of entries) {
+        heroVisible = entry.isIntersecting;
+        syncLauncherVisibility();
+      }
+    }, { threshold: 0.15 }).observe(heroStage);
+
+    heroStage.addEventListener('click', () => open());
+    heroStage.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        open();
+      }
+    });
+  } else {
+    syncLauncherVisibility();
+  }
+
   launcher.addEventListener('click', () => {
     if (isOpen) close();
     else open();
@@ -1360,31 +1384,6 @@ export function initTacticalConcierge(): void {
     renderChrome();
   });
 
-  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-    let pointerFrame = 0;
-    window.addEventListener('pointermove', event => {
-      if (pointerFrame) return;
-      pointerFrame = requestAnimationFrame(() => {
-        pointerFrame = 0;
-        root.querySelectorAll<SVGSVGElement>('.as-svg').forEach(svg => {
-          const rect = svg.getBoundingClientRect();
-          const centerX = rect.left + rect.width / 2;
-          const centerY = rect.top + rect.height * 0.55;
-          const dx = event.clientX - centerX;
-          const dy = event.clientY - centerY;
-          const distance = Math.hypot(dx, dy) || 1;
-          const offset = Math.min(1, distance / 240) * 1.4;
-          const x = (dx / distance) * offset;
-          const y = (dy / distance) * offset;
-
-          svg.querySelectorAll<SVGElement>('.as-pupil').forEach(pupil => {
-            pupil.style.transform = `translate(${x.toFixed(2)}px, ${y.toFixed(2)}px)`;
-          });
-        });
-      });
-    }, { passive: true });
-  }
-
   subscribeCart(() => {
     root.querySelectorAll<HTMLElement>('[data-as-cart-summary]').forEach(element => {
       element.outerHTML = renderCartSummary();
@@ -1393,8 +1392,6 @@ export function initTacticalConcierge(): void {
       link.href = checkoutUrl();
     });
   });
-
-
 
   (window as any).AssistantApi = {
     openChat: open,
