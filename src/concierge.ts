@@ -986,8 +986,8 @@ function renderAvatarPhoto(): string {
 
 function renderLauncher(): string {
   return `
-    <button id="tactical-concierge-launcher" type="button" aria-label="Geramel G-TECH chat" aria-expanded="false" aria-controls="tactical-concierge-panel" class="as-launcher group fixed bottom-4 right-[4.5rem] z-40 flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan-500/40 bg-slate-900 text-cyan-400 shadow-2xl shadow-cyan-500/20 transition-all duration-300 ease-out hover:scale-105 hover:border-cyan-400 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:bottom-6 sm:right-[5.75rem] sm:h-14 sm:w-14">
-      <span data-as-tooltip class="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-md border border-slate-700 bg-slate-950/95 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-cyan-300 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">GERAMEL</span>
+    <button id="tactical-concierge-launcher" type="button" aria-label="Geramel G-TECH chat" aria-expanded="false" aria-controls="tactical-concierge-panel" class="as-launcher group fixed bottom-4 left-3 z-40 flex h-12 w-12 items-center justify-center rounded-full border-2 border-cyan-500/40 bg-slate-900 text-cyan-400 shadow-2xl shadow-cyan-500/20 transition-all duration-300 ease-out hover:scale-105 hover:border-cyan-400 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950 sm:bottom-6 sm:left-6 sm:h-14 sm:w-14">
+      <span data-as-tooltip class="pointer-events-none absolute left-full top-1/2 ml-3 hidden -translate-y-1/2 whitespace-nowrap rounded-md border border-slate-700 bg-slate-950/95 px-3 py-1.5 font-mono text-[10px] uppercase tracking-widest text-cyan-300 opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:block">GERAMEL</span>
       <span class="absolute -right-1 -top-1 flex h-3 w-3">
         <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75"></span>
         <span class="relative inline-flex h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-slate-950"></span>
@@ -1296,7 +1296,7 @@ export function initTacticalConcierge(): void {
   let heroVisible = false;
 
   const syncLauncherVisibility = (): void => {
-    const hidden = heroStage !== null && heroVisible;
+    const hidden = (heroStage !== null && heroVisible) || document.getElementById('cookie-banner') !== null;
     launcher.classList.toggle('opacity-0', hidden);
     launcher.classList.toggle('pointer-events-none', hidden);
     launcher.classList.toggle('translate-y-4', hidden);
@@ -1335,6 +1335,17 @@ export function initTacticalConcierge(): void {
   } else {
     syncLauncherVisibility();
   }
+
+  const watchCookieBanner = (): void => {
+    syncLauncherVisibility();
+    const container = document.getElementById('cookie-banner-container');
+    if (!container || container.hasAttribute('data-as-cookie-watch')) return;
+    container.setAttribute('data-as-cookie-watch', '');
+    new MutationObserver(syncLauncherVisibility).observe(container, { childList: true });
+  };
+
+  new MutationObserver(watchCookieBanner).observe(document.body, { childList: true });
+  watchCookieBanner();
 
   launcher.addEventListener('click', () => {
     if (isOpen) close();
