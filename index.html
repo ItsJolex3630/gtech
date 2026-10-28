@@ -307,19 +307,20 @@
             </div>
 
             <!-- Interactive Tactical Speech Bubble (Asesor en vivo) -->
-            <div id="hero-avatar-bubble" class="absolute -top-16 sm:-top-16 z-30 max-w-[270px] sm:max-w-xs bg-slate-950/95 backdrop-blur-md border border-cyan-500/60 p-3 rounded-2xl shadow-2xl transition-all duration-300 group-hover/avatar:scale-105 group-hover/avatar:border-cyan-400 pointer-events-auto">
+            <div id="hero-avatar-bubble" class="absolute -top-16 left-1/2 z-30 w-[270px] max-w-[calc(100vw-2rem)] -translate-x-1/2 bg-slate-950/95 backdrop-blur-md border border-cyan-500/60 p-3 rounded-2xl shadow-2xl transition-all duration-300 group-hover/avatar:scale-105 group-hover/avatar:border-cyan-400 pointer-events-auto sm:left-[68%] sm:top-[18%] sm:w-[230px] sm:max-w-[230px] sm:translate-x-0 md:left-[80%] md:w-[240px] md:max-w-[240px] lg:left-auto lg:right-0 lg:top-[-4.5rem] lg:w-[260px] lg:max-w-[260px]">
               <div class="flex items-start gap-2.5">
                 <span class="flex h-2.5 w-2.5 relative flex-shrink-0 mt-1">
                   <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                   <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-400"></span>
                 </span>
                 <div class="text-left">
-                  <p class="text-[10px] font-mono uppercase tracking-widest text-cyan-400 font-extrabold" data-i18n="hero.avatar_bubble_title">ASESOR TÁCTICO // EN LÍNEA</p>
+                  <p class="text-[10px] font-mono uppercase tracking-wider text-cyan-400 font-extrabold" data-i18n="hero.avatar_bubble_title">ASESOR TÁCTICO // EN LÍNEA</p>
                   <p class="text-[11px] sm:text-xs text-slate-200 mt-0.5 leading-snug font-medium" data-i18n="hero.avatar_bubble_msg">¡Hola! Estoy aquí para ayudarte a elegir tu equipo ideal y responder cada duda. Haz clic para consultar.</p>
                 </div>
               </div>
               <!-- Indicador tipo punta táctica hacia el avatar -->
-              <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[8px] border-t-cyan-500/80"></div>
+              <div class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-t-[8px] border-t-cyan-500/80 sm:hidden lg:block"></div>
+              <div class="absolute -left-2 top-1/2 hidden -translate-y-1/2 w-0 h-0 border-t-[7px] border-t-transparent border-b-[7px] border-b-transparent border-r-[8px] border-r-cyan-500/80 sm:block lg:hidden"></div>
             </div>
 
             <!-- Brand Cutout Avatar: Full Unobstructed View & Interactive Glow -->
