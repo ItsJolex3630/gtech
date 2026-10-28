@@ -7,7 +7,7 @@ import { escapeHtml } from './utils/escape.ts';
 
 const WHATSAPP_NUMBER = '14074273356';
 const CONTACT_EMAIL = 'gtech.usfl@gmail.com';
-const PANEL_CLASS = 'concierge-gpu-accel fixed bottom-24 right-4 z-50 hidden h-[min(600px,calc(100dvh-9rem))] w-[calc(100vw-2rem)] flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 shadow-2xl backdrop-blur-md focus:outline-none sm:bottom-28 sm:right-6 sm:w-[400px]';
+const PANEL_CLASS = 'concierge-gpu-accel fixed bottom-24 left-4 z-50 hidden h-[min(600px,calc(100dvh-9rem))] w-[calc(100vw-2rem)] flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/95 shadow-2xl backdrop-blur-md focus:outline-none sm:bottom-28 sm:left-6 sm:w-[400px]';
 const ONLINE_STATUS = { en: 'Online', es: 'En línea' };
 const TYPING_STATUS = { en: 'Typing…', es: 'Escribiendo…' };
 
